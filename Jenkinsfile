@@ -9,7 +9,7 @@ pipeline {
 
     stage('sonarqube report') {
       steps {
-        sh '"${mavenHome}/bin/mvn sonar:sonar'
+        sh '"${mavenHome}/bin/mvn sonar:sonar"'
       }
     }
 
