@@ -7,5 +7,14 @@ pipeline {
       }
     }
 
+    stage('sonarqube report') {
+      steps {
+        sh '"${mavenHome}/bin/mvn sonar:sonar'
+      }
+    }
+
+  }
+  environment {
+    mavenHome = 'tool name : "Maven 3.6.3"'
   }
 }
