@@ -9,12 +9,12 @@ pipeline {
 
     stage('sonarqube report') {
       steps {
-        sh '"${mavenHome}/bin/mvn sonar:sonar"'
+        sh "${mavenHome}/bin/mvn sonar:sonar"
       }
     }
 
   }
   environment {
-    mavenHome = 'tool name : "Maven 3.6.3"'
+    def mavenHome = tool name : "Maven 3.6.3"
   }
 }
